@@ -1,0 +1,716 @@
+/* App.css */
+:root {
+  --primary-color: #f8e5b9; /* Cream yellow */
+  --secondary-color: #a8e6cf; /* Mint green */
+  --accent-color: #ffaaa5; /* Soft pink */
+  --background-color: #f9f7f0; /* Off-white */
+  --text-color: #5a5a5a; /* Dark gray */
+  --card-bg: #ffffff; /* White */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Marker Felt', 'Chalkboard', cursive;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  border-bottom: 3px dashed var(--accent-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+h1 span {
+  color: var(--accent-color);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--shadow-color);
+}
+
+button:active {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+button.primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.create-record-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome-banner {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px dashed var(--primary-color);
+}
+
+.welcome-text h2 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.fhe-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.tutorial-section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  border: 3px dotted var(--secondary-color);
+}
+
+.tutorial-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tutorial-step {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-content h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.step-details {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: calc(var(--border-radius) / 2);
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.stat-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  border: 2px solid var(--accent-color);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--accent-color);
+  font-family: inherit;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group select {
+  padding: 0.5rem;
+  border-radius: calc(var(--border-radius) / 2);
+  border: 2px solid var(--accent-color);
+  font-family: inherit;
+}
+
+.wine-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.wine-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  border: 2px solid var(--accent-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.wine-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 8px 8px 0 var(--shadow-color);
+}
+
+.wine-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.wine-type {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: calc(var(--border-radius) / 2);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-badge.recommended {
+  background-color: #a8e6cf;
+  color: #1a6b4b;
+}
+
+.status-badge.not_recommended {
+  background-color: #ffaaa5;
+  color: #8b0000;
+}
+
+.status-badge.pending {
+  background-color: #f8e5b9;
+  color: #8b7500;
+}
+
+.wine-region {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.wine-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.recommend-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.no-records {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+}
+
+.no-records-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.history-section {
+  margin-top: 3rem;
+}
+
+.history-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.history-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-color);
+}
+
+.history-wine {
+  font-weight: bold;
+}
+
+.history-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0.3rem 0;
+}
+
+.history-status {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: calc(var(--border-radius) / 2);
+  display: inline-block;
+}
+
+.history-status.recommended {
+  background-color: #a8e6cf;
+  color: #1a6b4b;
+}
+
+.history-status.not_recommended {
+  background-color: #ffaaa5;
+  color: #8b0000;
+}
+
+.history-status.pending {
+  background-color: #f8e5b9;
+  color: #8b7500;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.create-modal, .record-detail-modal {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 8px 8px 0 var(--shadow-color);
+  border: 3px solid var(--accent-color);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 2px dashed var(--accent-color);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.fhe-notice {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.notice-icon {
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: calc(var(--border-radius) / 2);
+  border: 2px solid var(--accent-color);
+  font-family: inherit;
+}
+
+.form-group input[type="range"] {
+  width: 100%;
+}
+
+.range-value {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.encryption-preview {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.preview-item {
+  background-color: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: calc(var(--border-radius) / 2);
+}
+
+.preview-item span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border-top: 2px dashed var(--accent-color);
+  gap: 1rem;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.wine-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: calc(var(--border-radius) / 2);
+}
+
+.info-item span {
+  font-weight: bold;
+}
+
+.encrypted-data-section {
+  margin-top: 1.5rem;
+}
+
+.encrypted-field {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.encrypted-value {
+  font-family: monospace;
+  word-break: break-all;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.decrypted-value {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.fhe-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.transaction-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.transaction-content {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  border: 2px solid var(--accent-color);
+}
+
+.transaction-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.transaction-icon.success {
+  color: #4CAF50;
+}
+
+.transaction-icon.error {
+  color: #F44336;
+}
+
+.wine-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid var(--primary-color);
+  border-top: 5px solid var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.app-footer {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  text-align: center;
+  border-top: 3px dashed var(--accent-color);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-brand {
+  text-align: left;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fhe-badge {
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-screen p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .wine-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-brand {
+    text-align: center;
+  }
+  
+  .footer-links {
+    justify-content: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
